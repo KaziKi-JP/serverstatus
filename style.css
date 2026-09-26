@@ -1,0 +1,128 @@
+body {
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: #f5f7fa;
+  margin: 0;
+  color: #333;
+}
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(245, 247, 250, 0.82);
+  backdrop-filter: blur(6px);
+  padding: 18px 28px 14px;
+  border-bottom: 1px solid #e3e5e8;
+  z-index: 50;
+}
+header h1 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+header p {
+  margin: 3px 0 0;
+  font-size: 13px;
+  color: #666;
+}
+
+.global-status {
+  margin-top: 83px;
+  text-align: center;
+  padding: 14px 0;
+  font-weight: 600;
+  color: #fff;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.up    { background: #34c759; }
+.down  { background: #ff3b30; }
+.nomal { background: #ffb900; }
+.maint { background: #ffcc00; color: #333; }
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  background: currentColor;
+  border-radius: 50%;
+}
+
+.service-list {
+  max-width: 780px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.status-card {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #e3e5e8;
+  padding: 22px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow:
+    0 2px 6px rgba(0,0,0,0.06),
+    0 6px 12px rgba(0,0,0,0.03);
+  opacity: 0;
+  transform: translateY(8px);
+  animation: fadeSlide 0.6s ease-out forwards;
+}
+
+.status-card.special {
+  background: #e0f7ff;
+  border-color: #e0f7ff;
+  margin-bottom: 30px;
+}
+.status-card.special .service-name {
+  color: #007acc;
+}
+
+@keyframes fadeSlide {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.service-name {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  backdrop-filter: blur(4px);
+}
+
+@media (max-width: 600px) {
+  .status-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 14px;
+    padding: 20px 20px;
+  }
+  .service-name { font-size: 17px; }
+  .badge { font-size: 13px; padding: 7px 14px; }
+}
+
+footer {
+  margin-top: 60px;
+  text-align: center;
+  font-size: 12px;
+  color: #999;
+  padding-bottom: 30px;
+}

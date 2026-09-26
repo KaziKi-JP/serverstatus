@@ -1,5 +1,5 @@
 {
-  "updated": "2025/12/29 12:24:56",
+  "updated": "2026/9/26 18:28:27",
   "global": {
     "status": "up",
     "label": "サーバーに参加できます。来てください！"
@@ -13,20 +13,14 @@
     },
     {
       "name": "Minecraftサーバー",
-      "status": "up",
-      "label": "稼働中",
-      "special": false
-    },
-    {
-      "name": "通信サーバー",
-      "status": "up",
-      "label": "稼働中",
+      "status": "down",
+      "label": "停止中",
       "special": false
     },
     {
       "name": "BE仲介サーバー",
-      "status": "up",
-      "label": "稼働中",
+      "status": "down",
+      "label": "停止中",
       "special": false
     }
   ]
